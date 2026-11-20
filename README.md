@@ -20,3 +20,7 @@ python src/cache_aside.py
 ![Rezultate cache-aside](docs/screenshots/1.png)
 
 Fără cache: 42 ms / anunț · Cu cache: 0.77 ms / anunț · ~54× mai rapid
+
+## Arhitectură
+
+![Arhitectura](docs/diagrams/arhitectura.drawio.png)
