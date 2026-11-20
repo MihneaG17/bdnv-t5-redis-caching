@@ -1,0 +1,18 @@
+services:
+  redis:
+    image: redis:8.2
+    container_name: stayfinder-redis
+    ports:
+      - "6379:6379"
+    command: >
+      redis-server
+      --maxmemory 50mb
+      --maxmemory-policy allkeys-lru
+
+  redisinsight:
+    image: redis/redisinsight:2.70
+    container_name: stayfinder-redisinsight
+    ports:
+      - "5540:5540"
+    depends_on:
+      - redis
